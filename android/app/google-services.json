@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "988168033687",
+    "project_id": "trial-codelab1",
+    "storage_bucket": "trial-codelab1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:988168033687:android:8a3b0522469bf1d169a0d2",
+        "android_client_info": {
+          "package_name": "com.example.firestore"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCuPVCbyNaSoUA83G1enJm_IZ0Ad_WGDl0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:988168033687:android:741b065f86c949a669a0d2",
+        "android_client_info": {
+          "package_name": "com.example.myapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCuPVCbyNaSoUA83G1enJm_IZ0Ad_WGDl0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

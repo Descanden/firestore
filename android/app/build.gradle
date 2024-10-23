@@ -1,0 +1,70 @@
+buildscript {
+    repositories {
+        // Pastikan sudah menyertakan Google Maven repository
+        google() // Google's Maven repository
+        mavenCentral() // Repositori tambahan jika diperlukan
+    }
+    dependencies {
+        // Tambahkan dependensi untuk Google Services plugin
+        classpath 'com.google.gms:google-services:4.3.13' // Google Services plugin
+    }
+}
+
+plugins {
+    id "com.android.application"
+    // START: FlutterFire Configuration
+    id 'com.google.gms.google-services' // Google Services plugin
+    // END: FlutterFire Configuration
+    id "kotlin-android"
+    // The Flutter Gradle Plugin must be applied after the Android and Kotlin Gradle plugins.
+    id "dev.flutter.flutter-gradle-plugin"
+}
+
+allprojects {
+    repositories {
+        // Pastikan Google Maven repository ada di sini
+        google() // Google's Maven repository
+        mavenCentral() // Repositori tambahan
+    }
+}
+
+android {
+    namespace = "com.example.firestore"
+    compileSdk = flutter.compileSdkVersion
+    ndkVersion = flutter.ndkVersion
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8
+    }
+
+    defaultConfig {
+        // Application ID unik
+        applicationId = "com.example.myapp"
+        // Konfigurasi versi SDK
+        minSdk = flutter.minSdkVersion
+        targetSdk = flutter.targetSdkVersion
+        versionCode = flutter.versionCode
+        versionName = flutter.versionName
+        minSdkVersion flutter.minSdkVersion
+    }
+
+    buildTypes {
+        release {
+            signingConfig = signingConfigs.debug
+        }
+    }
+}
+
+flutter {
+    source = "../.."
+}
+
+dependencies {
+    implementation platform('com.google.firebase:firebase-bom:31.1.1')
+    implementation 'com.google.firebase:firebase-analytics'
+}
